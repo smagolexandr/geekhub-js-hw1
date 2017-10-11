@@ -6,20 +6,22 @@ var arrays = [
   [1,NaN,3,5,-3]
 ]
 
-arrays.forEach(function (array) {
-  document.write('<div>'+minMaxSum(array)+'</div>')
-})
+var i = 0;
+while (i <= arrays.length) {
+    document.write('<div>'+minMaxSum(arrays[i])+'</div>')
+    i++;
+}
 
 function minMaxSum(array) {
   var max = null
   var min = null
   var sum = null
-  array.forEach(function (item) {
-    if (item != null && typeof item == 'number' && !Number.isNaN(item)) {
-      if (!max || max < item) max = item
-      if (!min || min > item) min = item
-      sum += item
+    for (var i = 0; i <= array.length; i++){
+        if (array[i] != null && typeof array[i] == 'number' && !Number.isNaN(array[i])) {
+            if (!max || max < array[i]) max = array[i]
+            if (!min || min > array[i]) min = array[i]
+            sum += array[i]
+        }
     }
-  })
   return [max, min, sum]
 }
