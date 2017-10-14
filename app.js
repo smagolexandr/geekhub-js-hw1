@@ -15,7 +15,7 @@ while (i < arrays.length) {
 function minMaxSum(array) {
   var max = null
   var min = null
-  var sum = null  console.log(array.length)
+  var sum = null
     for (var i = 0; i < array.length; i++){
       if (array[i] != null && typeof array[i] == 'number' && !Number.isNaN(array[i])) {
           if (!max || max < array[i]) max = array[i]
