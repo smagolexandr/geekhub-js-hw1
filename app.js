@@ -7,7 +7,7 @@ var arrays = [
 ]
 
 var i = 0;
-while (i <= arrays.length) {
+while (i < arrays.length) {
     document.write('<div>'+minMaxSum(arrays[i])+'</div>')
     i++;
 }
@@ -15,13 +15,13 @@ while (i <= arrays.length) {
 function minMaxSum(array) {
   var max = null
   var min = null
-  var sum = null
-    for (var i = 0; i <= array.length; i++){
-        if (array[i] != null && typeof array[i] == 'number' && !Number.isNaN(array[i])) {
-            if (!max || max < array[i]) max = array[i]
-            if (!min || min > array[i]) min = array[i]
-            sum += array[i]
-        }
+  var sum = null  console.log(array.length)
+    for (var i = 0; i < array.length; i++){
+      if (array[i] != null && typeof array[i] == 'number' && !Number.isNaN(array[i])) {
+          if (!max || max < array[i]) max = array[i]
+          if (!min || min > array[i]) min = array[i]
+          sum += array[i]
+      }
     }
   return [max, min, sum]
 }
